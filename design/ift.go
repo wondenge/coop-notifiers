@@ -32,8 +32,12 @@ var IFTAccountToAccountCallbackRequest = Type("IFTAccountToAccountCallbackReques
 		Example("FULL SUCCESS")
 	})
 	Attribute("Source", SourceAccountCallbackRequest)
-	Attribute("Destinations", ArrayOf(DestinationAccountCallbackRequest), func() {
-		MinLength(1)
-	})
-	Required("MessageReference", "MessageDateTime", "MessageCode", "MessageDescription", "Source", "Destinations")
+	Attribute("Destinations", DestinationAccountCallbackRequest)
+	Required("MessageReference",
+		"MessageDateTime",
+		"MessageCode",
+		"MessageDescription",
+		"Source",
+		"Destinations",
+	)
 })

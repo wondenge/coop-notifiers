@@ -18,15 +18,32 @@ var PesaLinkSendToAccountCallbackRequest = Type("PesaLinkSendToAccountCallbackRe
 		MaxLength(27)
 		Example("40ca18c6765086089a1")
 	})
+	Attribute("MessageDateTime", String, func() {
+		Description("Acknowledgement message creation timestamp")
+		Format(FormatDateTime)
+		Example("2017-12-04T09:27:00")
+	})
+	Attribute("MessageCode", String, func() {
+		Description("Message Response Code")
+		Example("0")
+	})
+	Attribute("MessageDescription", String, func() {
+		Description("Message Code description")
+		Example("FULL SUCCESS")
+	})
 	Attribute("CallBackUrl", String, func() {
 		Description("Your callback URL that will receive transaction processing results")
 		Example("https://yourdomain.com/ft-callback")
 	})
-	Attribute("Source", SourceAccountTransactionRequest)
-	Attribute("Destinations", ArrayOf(DestinationAccountTransactionRequest), func() {
-		MinLength(1)
-	})
-	Required("MessageReference", "CallBackUrl", "Source", "Destinations")
+	Attribute("Source", SourceAccountCallbackRequest)
+	Attribute("Destinations", DestinationAccountCallbackRequest)
+	Required("MessageReference",
+		"MessageDateTime",
+		"MessageCode",
+		"MessageDescription",
+		"Source",
+		"Destinations",
+	)
 })
 
 // 10.PesaLinkSendToPhone
@@ -39,15 +56,32 @@ var PesaLinkSendToPhoneTransactionRequest = Type("PesaLinkSendToPhoneTransaction
 		MaxLength(27)
 		Example("40ca18c6765086089a1")
 	})
+	Attribute("MessageDateTime", String, func() {
+		Description("Acknowledgement message creation timestamp")
+		Format(FormatDateTime)
+		Example("2017-12-04T09:27:00")
+	})
+	Attribute("MessageCode", String, func() {
+		Description("Message Response Code")
+		Example("0")
+	})
+	Attribute("MessageDescription", String, func() {
+		Description("Message Code description")
+		Example("FULL SUCCESS")
+	})
 	Attribute("CallBackUrl", String, func() {
 		Description("Your callback URL that will receive transaction processing results")
 		Example("https://yourdomain.com/ft-callback")
 	})
-	Attribute("Source", SourceAccountTransactionRequest)
-	Attribute("Destinations", ArrayOf(DestinationAccountTransactionRequest), func() {
-		MinLength(1)
-	})
-	Required("MessageReference", "CallBackUrl", "Source", "Destinations")
+	Attribute("Source", SourceAccountCallbackRequest)
+	Attribute("Destinations", DestinationAccountCallbackRequest)
+	Required("MessageReference",
+		"MessageDateTime",
+		"MessageCode",
+		"MessageDescription",
+		"Source",
+		"Destinations",
+	)
 })
 var PesaLinkSendToPhoneCallbackRequest = Type("PesaLinkSendToPhoneCallbackRequest", func() {
 	Description("Pesalink send to phone callback request")
