@@ -104,7 +104,7 @@ type SourceAccountCallbackRequest struct {
 	// Posting account number
 	AccountNumber string
 	// Transaction Amount
-	Amount uint64
+	Amount float64
 	// Posting account currency in ISO Currency Code
 	TransactionCurrency string
 	// Posting account transaction narration
@@ -122,7 +122,7 @@ type DestinationAccountCallbackRequest struct {
 	// Recipient M-Pesa mobile number
 	MobileNumber string
 	// Transaction Amount
-	Amount int
+	Amount float64
 	// Transaction posting narration
 	Narration string
 	// Co-operative Bank's processed transaction number concatenated with M-Pesa

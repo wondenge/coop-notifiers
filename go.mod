@@ -4,7 +4,7 @@ go 1.14
 
 require (
 	github.com/dimfeld/httptreemux/v5 v5.2.2 // indirect
-	github.com/go-kit/kit v0.10.0 // indirect
+	github.com/go-kit/kit v0.10.0
 	github.com/golang/protobuf v1.4.2 // indirect
 	github.com/gorilla/websocket v1.4.2 // indirect
 	goa.design/goa/v3 v3.1.3

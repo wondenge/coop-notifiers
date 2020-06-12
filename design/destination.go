@@ -22,7 +22,7 @@ var DestinationAccountCallbackRequest = Type("DestinationAccountCallbackRequest"
 		MaxLength(13)
 		Example("2547xxxxxxxx")
 	})
-	Attribute("Amount", Int, func() {
+	Attribute("Amount", Float64, func() {
 		Description("Transaction Amount")
 		Minimum(0)
 		Maximum(999999)

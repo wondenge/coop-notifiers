@@ -234,7 +234,7 @@ type SourceAccountCallbackRequestRequestBody struct {
 	// Posting account number
 	AccountNumber *string `form:"AccountNumber,omitempty" json:"AccountNumber,omitempty" xml:"AccountNumber,omitempty"`
 	// Transaction Amount
-	Amount *uint64 `form:"Amount,omitempty" json:"Amount,omitempty" xml:"Amount,omitempty"`
+	Amount *float64 `form:"Amount,omitempty" json:"Amount,omitempty" xml:"Amount,omitempty"`
 	// Posting account currency in ISO Currency Code
 	TransactionCurrency *string `form:"TransactionCurrency,omitempty" json:"TransactionCurrency,omitempty" xml:"TransactionCurrency,omitempty"`
 	// Posting account transaction narration
@@ -253,7 +253,7 @@ type DestinationAccountCallbackRequestRequestBody struct {
 	// Recipient M-Pesa mobile number
 	MobileNumber *string `form:"MobileNumber,omitempty" json:"MobileNumber,omitempty" xml:"MobileNumber,omitempty"`
 	// Transaction Amount
-	Amount *int `form:"Amount,omitempty" json:"Amount,omitempty" xml:"Amount,omitempty"`
+	Amount *float64 `form:"Amount,omitempty" json:"Amount,omitempty" xml:"Amount,omitempty"`
 	// Transaction posting narration
 	Narration *string `form:"Narration,omitempty" json:"Narration,omitempty" xml:"Narration,omitempty"`
 	// Co-operative Bank's processed transaction number concatenated with M-Pesa

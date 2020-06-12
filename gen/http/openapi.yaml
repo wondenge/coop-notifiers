@@ -776,7 +776,7 @@ definitions:
     type: object
     properties:
       Amount:
-        type: integer
+        type: number
         description: Transaction Amount
         example: 777
         minimum: 0
@@ -836,7 +836,7 @@ definitions:
         minLength: 14
         maxLength: 14
       Amount:
-        type: integer
+        type: number
         description: Transaction Amount
         example: 777
         minimum: 0.01

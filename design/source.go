@@ -17,7 +17,7 @@ var SourceAccountCallbackRequest = Type("SourceAccountCallbackRequest", func() {
 		Example("36001873000")
 		Example("54321987654321")
 	})
-	Attribute("Amount", UInt64, func() {
+	Attribute("Amount", Float64, func() {
 		Description("Transaction Amount")
 		Minimum(0.01)
 		Maximum(999999.99)
